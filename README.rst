@@ -4,6 +4,10 @@ Backend Code
 
 The code in this directory is a backend for storing and manipulating Fifty State data in a CouchDB server.
 
+This code is licensed under the `GPLv3 license <http://www.fsf.org/licensing/licenses/gpl-3.0.html>`_
+
+See LICENSING for the full terms of the GPLv3.
+
 Requirements
 ------------
 
