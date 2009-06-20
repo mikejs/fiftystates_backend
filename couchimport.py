@@ -104,9 +104,9 @@ class CouchImporter(object):
                 self.log("Importing legislator: %s (%s %s)" % (
                     legislator['full_name'], legislator['chamber'],
                     legislator['session']))
-                doc_id = 'legislator:%s:%s:%s' % (legislator['chamber'],
-                                                  legislator['district'],
-                                                  legislator['session'])
+                doc_id = 'legislator:%s:%s:%s' % (legislator['session'],
+                                                  legislator['chamber'],
+                                                  legislator['district'])
                 legislator['sessions'] = [legislator['session']]
                 del legislator['session']
                 self.get(doc_id).update(legislator)
