@@ -11,7 +11,8 @@ function(doc) {
             if(vote.yes_votes[j].leg_id) {
                 emit([vote.yes_votes[j].leg_id, doc.session, doc._id],
                      {'vote': 'yes', 'bill_title': doc.title,
-                             'motion': vote.motion});
+                             'motion': vote.motion,
+                             'bill_id': doc.bill_id});
             }
         }
 
@@ -19,7 +20,8 @@ function(doc) {
             if(vote.no_votes[j].leg_id) {
                 emit([vote.no_votes[j].leg_id, doc.session, doc._id],
                      {'vote': 'no', 'bill_title': doc.title,
-                             'motion': vote.motion});
+                             'motion': vote.motion,
+                             'bill_id': doc.bill_id});
             }
         }
 
@@ -27,7 +29,8 @@ function(doc) {
             if(vote.other_votes[j].leg_id) {
                 emit([vote.other_votes[j].leg_id, doc.session, doc._id],
                      {'vote': 'other', 'bill_title': doc.title,
-                             'motion': vote.motion});
+                             'motion': vote.motion,
+                             'bill_id': doc.bill_id});
             }
         }
     }
